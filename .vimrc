@@ -9,10 +9,17 @@ set autoindent
 set number
 set hlsearch
 syntax on
+set cursorcolumn
 set cursorline
 set ruler
+"highlight CursorColumn   xxx term=reverse ctermbg=7 guibg=Grey90
+"highlight CursorLine    xxx term=reverse ctermbg=7 guibg=Grey90
 nmap <ESC><ESC> :noh<CR><ESC>
 
 " color
 set background=dark
 colorscheme mustang
+
+" status
+set laststatus=2
+set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
