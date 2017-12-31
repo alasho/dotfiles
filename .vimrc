@@ -16,6 +16,12 @@ set ruler
 "highlight CursorLine    xxx term=reverse ctermbg=7 guibg=Grey90
 nmap <ESC><ESC> :noh<CR><ESC>
 
+" char code
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
+
+
 " color
 set background=dark
 colorscheme mustang

@@ -15,6 +15,9 @@ LightPurple='1;35m'
 Yellow='1;33m'
 White='1;37m'
 
+# alias
+alias pip='pip3.6' 
+
 # git 
 if [ -f  $HOME/git-prompt.sh ]; then
     source ~/git-prompt.sh
@@ -22,6 +25,7 @@ fi
 if [ -f  $HOME/git-completion.bash ]; then
     source ~/git-completion.bash
 fi
+
 
 ############### ターミナルのコマンド受付状態の表示変更
 # \u ユーザ名
