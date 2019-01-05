@@ -34,6 +34,10 @@ if [ -f  $HOME/git-completion.bash ]; then
     source ~/git-completion.bash
 fi
 
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 
 ############### ターミナルのコマンド受付状態の表示変更
 # \u ユーザ名
