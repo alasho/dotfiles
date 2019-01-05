@@ -5,9 +5,8 @@ colorscheme landscape
 " tab
 set expandtab
 set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set smartindent
+
+
 set autoindent
 
 " edit
@@ -32,6 +31,14 @@ set laststatus=2
 set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
 
 " NeoBundle
+"
+"   $ mkdir -p ~/.vim/bundle
+"   $ git clone git://github.com/Shougo/neobundle.vim
+"   ~/.vim/bundle/neobundle.vim
+"   :NeoBundleInstall
+"   $ mkdir ~/.vim/colors
+"   $ cp ~/.vim/bundle/landscape.vim/colors/landscape.vim ~/.vim/colors
+"   :NeoBundleUpdate
 set nocompatible
 filetype plugin indent off
 if has('vim_starting')
@@ -44,6 +51,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'itchyny/landscape.vim'
 call neobundle#end()
 filetype plugin indent on
 
