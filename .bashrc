@@ -49,6 +49,6 @@ export NVM_DIR="$HOME/.nvm"
 # \[ 表示させない文字列の開始
 # \] 表示させない文字列の終了
 # \$ $
-PS1="[\[\e[${Green}\]\u\[\e[${Cyan}\]@\h\[\e[${Yellow}\]\$(__git_ps1 \(%s\))\[\e[00m\]:\w ]\n\$ "
+PS1="[\D{%F} \t \[\e[${Green}\]\u\[\e[${Cyan}\]@\h\[\e[${Yellow}\]\$(__git_ps1 \(%s\))\[\e[00m\]:\w ]\n\$ "
 
 export PS1
