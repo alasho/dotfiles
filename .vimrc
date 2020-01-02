@@ -17,7 +17,7 @@ set cursorcolumn
 set cursorline
 set ruler
 hi CursorColumn cterm=bold ctermbg=0
-hi CursorLine    term=underline ctermbg=7 guibg=Grey90
+hi CursorLine   cterm=underline ctermfg=None ctermbg=None
 nmap <ESC><ESC> :noh<CR><ESC>
 " symbolic char like tab
 set list
@@ -50,20 +50,19 @@ set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l
 set nocompatible
 filetype plugin indent off
 if has('vim_starting')
-    set runtimepath+=/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle'))
-        NeoBundleFetch 'Shougo/neobundle.vim'
-    call neobundle#end()
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-" find file completion
-"NeoBundle 'Shougo/unite.vim.git'
-" color schemes
-NeoBundle 'itcyny/landscape.vim'
-" surround short-cut
-" NeoBundle 'tpope/vim-surround'
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#begin(expand('~/.vim/bundle'))
+    NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
+endif 
+" Install Plugins
+call neobundle#begin(expand('~/.vim/bundle'))
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/syntastic'
 call neobundle#end()
 
 filetype plugin indent on
+
+let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 
