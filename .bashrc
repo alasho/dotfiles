@@ -15,8 +15,16 @@ LightPurple='1;35m'
 Yellow='1;33m'
 White='1;37m'
 
+# varias
+HISTSIZE=9999
+HISTFILESIZE=
+export HISTTIMEFORMAT='%F %T '
+
+# search forward
+stty stop ''
+
 # alias
-alias pip='pip3.6' 
+alias pip='pip3' 
 
 # git 
 if [ -f  $HOME/git-prompt.sh ]; then
@@ -25,6 +33,10 @@ fi
 if [ -f  $HOME/git-completion.bash ]; then
     source ~/git-completion.bash
 fi
+
+# node
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 
 ############### ターミナルのコマンド受付状態の表示変更
