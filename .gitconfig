@@ -4,5 +4,12 @@
     branch = auto
     interactive = auto
     grep = auto
+    ui = auto
+[core]
+    filemode = false
+    editor = vim
 [alias]
     st = status
+[user]
+	email = alasho1123@gmail.com
+	name = alasho

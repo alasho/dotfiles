@@ -1,3 +1,7 @@
+" color
+set background=dark
+colorscheme landscape
+
 " tab
 set expandtab
 set tabstop=2
@@ -18,20 +22,17 @@ nmap <ESC><ESC> :noh<CR><ESC>
 " symbolic char like tab
 set list
 hi NonText cterm=NONE ctermfg=8
+hi Search ctermbg=3* ctermfg=1
 
 " char code
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
-
-
-" color
-set background=dark
-colorscheme mustang
 
 " status
 set laststatus=2
 set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
+
 
 " NeoBundle settings
 " get neobundle
@@ -43,6 +44,9 @@ set statusline=%<%f\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l
 "   :NeoBundleUpdate
 " plugin remove command ( after remove plugin from .vimrc )
 "   :NeoBundleClean
+" set color theme
+"   $ mkdir ~/.vim/colors
+"   $ cp ~/.vim/bundle/landscape.vim/colors/landscape.vim ~/.vim/colors
 set nocompatible
 filetype plugin indent off
 if has('vim_starting')
@@ -57,6 +61,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 "NeoBundle 'Shougo/unite.vim.git'
 " color schemes
 NeoBundle 'itcyny/landscape.vim'
+" surround short-cut
+" NeoBundle 'tpope/vim-surround'
 call neobundle#end()
 
 filetype plugin indent on
+
