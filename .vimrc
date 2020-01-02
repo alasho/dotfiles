@@ -60,6 +60,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'itchyny/landscape.vim'
 call neobundle#end()
 
 filetype plugin indent on
