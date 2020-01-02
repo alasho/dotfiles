@@ -16,8 +16,8 @@ syntax on
 set cursorcolumn
 set cursorline
 set ruler
-hi CursorColumn cterm=bold ctermbg=0
-hi CursorLine    term=underline ctermbg=7 guibg=Grey90
+hi CursorColumn cterm=bold ctermbg=None
+hi CursorLine cterm=underline ctermfg=None ctermbg=None
 nmap <ESC><ESC> :noh<CR><ESC>
 " symbolic char like tab
 set list
